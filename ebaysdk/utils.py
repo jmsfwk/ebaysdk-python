@@ -10,6 +10,10 @@ import sys
 from lxml import etree as ET
 from xml.sax.saxutils import escape
 
+try:
+    unicode
+except NameError:
+    unicode = str
 
 def parse_yaml(yaml_file):
     """
